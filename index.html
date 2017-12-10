@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/style.css">
-	<title>Document</title>
+	<title>Prueba Suerte</title>
 </head>
 <body id="myForm">
 	<main class="container">
@@ -17,15 +17,15 @@
 				</div>
 				<div class="number-box">
 					<span class="intro">Introduce aquí tu número</span>
-					<input type="text" name="number" class="number" value=" "></input>
-					<button type="button" value="prueba" class="button-text">Prueba</button>
+					<input id="number" type="text" name="number" class="number"></input>
+					<button id="try-button" type="button" value="prueba" class="try-button">Prueba</button>
 				</div>
 				<div class="save-box hidden">
 				<input type="text" name="name" class="name"></input>
 				<button type="button" value="save" class="save-button">Guarda</button>
 				</div>
 				</div>
-				<div class="result">
+				<div id="feedback" class="result">
 					<p>Escribe un número y dale a <em>Prueba</em></p>
 				</div>
 		</section>
@@ -33,7 +33,7 @@
 			<h2>Histórico</h2>
 			<div>
 				<ul class="scores">
-				
+
 				</ul>
 			</div>
 		</section>

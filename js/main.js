@@ -1,27 +1,28 @@
 'use strict';
-var randomNumber = (Math.round(Math.random()*10))+1;
+// var randomNumber = (Math.round(Math.random()*10))+1;
 var tried = document.querySelector('.number');
-var button = document.querySelector('.button-text');
+var tryButton = document.querySelector('.try-button');
 var result = document.querySelector('.result')
 var saveBox = document.querySelector('.save-box')
-tried.value = parseInt(tried.value);
 var newTry = document.querySelector('.counter')
-var counter = {
-	initialValue: 1,
-}
+var counter = 0
 var scores = document.querySelector('.name');
 var saveButton = document.querySelector('.save-button');
 var historic = document.querySelector('.scores');
+
 /*Funcion randomNumber*/
-// function newRandom() {
-// return (randomNumber)
-// }
-//console.log(newRandom())
+function getRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+var randomNumber = getRandom(1, 10);
+//console.log(randomNumber);
 
 /*Contador*/
 function startCount() {
-	counter.currentValue= counter.initialValue ++;
-	newTry.innerHTML = counter.currentValue;
+	counter += 1;
+	newTry.innerHTML = counter;
 }
 
 /*Funcion para pistas*/
@@ -36,22 +37,29 @@ if (tried.value == randomNumber) {
 } else {
 	result.innerHTML = 'Demasiado bajo';
 }
-
 }
-
+/*Funcion Limpiar*/
+function clear() {
+// document.getElementById('message').innerHTML = '';
+document.getElementById('feedback').innerHTML = '<p>Escribe un número y dale a <em>Prueba</em></p>';
+document.getElementById('number').value = '';
+saveBox.classList.add('hidden');
+}
 /*Funcion Reset*/
 function reset() {
-	saveBox.classList.add('hidden');
-	newRandom()
-
+	counter = 0 - 1;
+	  startCount();
+	  clear();
+	  randomNumber = getRandom(1, 10);
 }
 /*Funcion guardar historico*/
 
 function fillHistoric() {
 	historic.innerHTML += '<li>' + scores.value + '</li>'
-	reset()
 	}
 
-saveButton.addEventListener('click', fillHistoric)
-button.addEventListener('click', comprobate)
-button.addEventListener('click', startCount);
+
+tryButton.addEventListener('click', comprobate)
+tryButton.addEventListener('click', startCount);
+saveButton.addEventListener('click', fillHistoric);
+saveButton.addEventListener('click', reset);
