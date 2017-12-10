@@ -6,32 +6,35 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<title>Document</title>
 </head>
-<body>
+<body id="myForm">
 	<main class="container">
 		<section class="section1">
+
 			<div class="game-box">
-				<div>
-					<h1>Adivina el número</h1>
+				<div class="title-box">
+					<h1 class="principal-title">Adivina el número</h1>
+				<h2 class="counter">0</h2>
 				</div>
 				<div class="number-box">
-					<span>Introduce aquí tu número</span>
-					<input type="text" name="number" class="number"></input>
+					<span class="intro">Introduce aquí tu número</span>
+					<input type="text" name="number" class="number" value=" "></input>
 					<button type="button" value="prueba" class="button-text">Prueba</button>
 				</div>
-				<div class="save-box">
+				<div class="save-box hidden">
 				<input type="text" name="name" class="name"></input>
-				<button type="button" value="save" class="button-save">Guarda</button>
+				<button type="button" value="save" class="save-button">Guarda</button>
 				</div>
-			</div>
+				</div>
 				<div class="result">
 					<p>Escribe un número y dale a <em>Prueba</em></p>
 				</div>
-
 		</section>
 		<section class="score-box">
 			<h2>Histórico</h2>
 			<div>
-				<ul></ul>
+				<ul class="scores">
+				
+				</ul>
 			</div>
 		</section>
 	</main>
