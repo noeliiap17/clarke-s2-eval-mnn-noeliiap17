@@ -1,5 +1,6 @@
 body {
 	background-color: #DED8D2;
+	background-size: cover;
 }
 h1 {
 	color: #EA8D42;
@@ -72,7 +73,7 @@ h2 {
 
 .result {
 	color: #8F582F;
-	width: 80%;
+	width: 60%;
 	border: 1px solid #8F582F;
 	display: flex;
 	justify-content: center;
