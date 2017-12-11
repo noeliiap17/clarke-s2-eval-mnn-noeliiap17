@@ -9,6 +9,7 @@ var counter = 0;
 var gamer = document.querySelector('.name');
 var saveButton = document.querySelector('.save-button');
 var historic = document.querySelector('.scores');
+var simpson = document.querySelector('.img')
 
 /*Funcion randomNumber*/
 function getRandom(min, max) {
@@ -30,11 +31,15 @@ function startCount() {
 function comprobate() {
 
 if (tried.value == randomNumber) {
-	result.innerHTML = 'Enhorabuena, has ACERTADO';
+	document.getElementById('number').value = '';
+	result.innerHTML = 'Enhorabuena, has ACERTADO' + '<img class="img-ok"src="../images/Yo.png">';
 	saveBox.classList.remove('hidden');
+	simpson.classList.add('hidden');
 } else if (tried.value > randomNumber) {
+	document.getElementById('number').value = '';
 	result.innerHTML = 'Demasiado alto';
 } else {
+	document.getElementById('number').value = '';
 	result.innerHTML = 'Demasiado bajo';
 }
 }
@@ -43,6 +48,7 @@ function clear() {
 document.getElementById('feedback').innerHTML = '<p>Escribe un número y dale a <em>Prueba</em></p>';
 document.getElementById('number').value = '';
 saveBox.classList.add('hidden');
+simpson.classList.remove('hidden');
 }
 /*Funcion Reset*/
 function reset() {
@@ -54,7 +60,7 @@ function reset() {
 /*Funcion guardar historico*/
 
 function fillHistoric() {
-	historic.innerHTML += '<li>' + gamer.value + ' ' + counter + '</li>';
+	historic.innerHTML += '<li>' + gamer.value + ': ' + counter + ' intentos' + '</li>';
 	}
 
 
