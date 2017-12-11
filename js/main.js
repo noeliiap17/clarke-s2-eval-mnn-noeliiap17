@@ -32,21 +32,24 @@ function comprobate() {
 
 if (tried.value == randomNumber) {
 	document.getElementById('number').value = '';
-	result.innerHTML = 'Enhorabuena, has ACERTADO' + '<img class="img-ok"src="../images/Yo.png">';
+	result.innerHTML = 'Enhorabuena, has ACERTADO' + '<img class="img-ok"src="../images/homer_simpsonwoohooo.gif">';
 	saveBox.classList.remove('hidden');
 	simpson.classList.add('hidden');
 } else if (tried.value > randomNumber) {
 	document.getElementById('number').value = '';
-	result.innerHTML = 'Demasiado alto';
+	result.innerHTML = 'Demasiado alto' + '<img class="img-ok"src="../images/doh.jpg">';
+	simpson.classList.add('hidden');
 } else {
 	document.getElementById('number').value = '';
-	result.innerHTML = 'Demasiado bajo';
+	result.innerHTML = 'Demasiado bajo' + '<img class="img-ok"src="../images/doh.jpg">';
+	simpson.classList.add('hidden');
 }
 }
 /*Funcion Limpiar*/
 function clear() {
 document.getElementById('feedback').innerHTML = '<p>Escribe un número y dale a <em>Prueba</em></p>';
 document.getElementById('number').value = '';
+document.getElementById('name').value = '';
 saveBox.classList.add('hidden');
 simpson.classList.remove('hidden');
 }

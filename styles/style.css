@@ -1,6 +1,7 @@
 body {
 	background-color: #DED8D2;
 	background-size: cover;
+	box-sizing: border-box;
 }
 h1 {
 	color: #EA8D42;
@@ -43,7 +44,19 @@ h2 {
 .intro {
 	color: #D79C35;
 }
+input {
+	border-radius: 10px;
+}
+button {
+	border-radius: 10px;
+	width: 100px;
+}
 .try-button {
+	background-color: #D79C35;
+	color: #8F582F;
+	border-color: #8F582F;
+}
+.save-button {
 	background-color: #D79C35;
 	color: #8F582F;
 	border-color: #8F582F;
@@ -87,15 +100,16 @@ h2 {
 .img {
 	background-image: url(../images/simpson.png);
 	background-size: cover;
-	width: 300px;
+	width: 400px;
 	height: 300px;
 	position: absolute;
 	bottom: 10px;
+	right: 45%;
 }
 .img-ok {
-	background-image: url(../images/Yo.png);
-	width: 100px;
-	height: 100px;
+	background-image: url(../images/homer_simpsonwoohooo.gif);
+	width: 200px;
+	height: 155px;
 }
 
 /*Section 2*/
