@@ -45,7 +45,7 @@ h2 {
 	color: #D79C35;
 }
 input {
-	border-radius: 10px;
+	border-radius: 5px;
 }
 button {
 	border-radius: 10px;
@@ -92,6 +92,7 @@ button {
 	color: #8F582F;
 	width: 60%;
 	border: 1px solid #8F582F;
+	border-radius: 10px;
 	display: flex;
 	justify-content: center;
 	margin-top: 50px;

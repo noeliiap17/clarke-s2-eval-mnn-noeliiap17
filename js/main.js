@@ -17,7 +17,7 @@ function getRandom(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
-var randomNumber = getRandom(1, 10);
+var randomNumber = getRandom(1, 100);
 //console.log(randomNumber);
 
 /*Contador*/
@@ -29,7 +29,7 @@ function startCount() {
 /*Funcion para pistas*/
 
 function comprobate() {
-
+	
 if (tried.value == randomNumber) {
 	document.getElementById('number').value = '';
 	result.innerHTML = 'Enhorabuena, has ACERTADO' + '<img class="img-ok"src="../images/homer_simpsonwoohooo.gif">';
@@ -58,7 +58,7 @@ function reset() {
 	counter = 0 - 1;
 	  startCount();
 	  clear();
-	  randomNumber = getRandom(1, 10);
+	  randomNumber = getRandom(1, 100);
 }
 /*Funcion guardar historico*/
 
